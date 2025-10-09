@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/logo.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/contact.css">
+    <title>Y.D_Contacto</title>
+</head>
+
+<body>
+    
+    <header>
+        <a href="./index.html" class="logo">
+            <img src="./img/miLogo.png" alt="logo">
+        </a>
+        <nav>   
+            <a href="./index.html">Inicio</a> <a href="./info.html">Sobre mi</a>
+        </nav>
+            <h1>Bienvenido</h1>  
+    </header>
+    <main>
+    <div class="nota">
+        
+        <form action="https://formspree.io/f/xpwjgrpp" method="POST" autocomplete="off">
+            <legend>Escribime para mas Información:</legend><br>
+            <fieldset class="container">
+                <input type="text" name="nombre" value="" placeholder="Nombre y Apellido" required><br>
+                <input type="text"  name="direccion" value="" placeholder="Direccion" required><br>
+                <input type="text" name="email" value="" placeholder="Correo electronico" required><br>
+                <input type="tel" name="telefono" value="" placeholder="Num Telefono" required><br>
+
+                <label for="motivo">Motivo:</label>
+                <select id="motivo" name="motivo">
+                    <option value="" class="option">-Seleccioná una opción-</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="soporte">Soporte</option>
+                    <option value="otros">Otros</option>
+                </select><br>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="30" placeholder="Escribi tu mensaje"></textarea><br>
+                <input type="submit" name="enviar" >
+                <!-- <button type="submit">Enviar</button> -->
+                <!-- <i class="fa-solid fa-envelope"></i> -->
+            </fieldset><br>
+        
+        </form>
+    </div>
+
+</main>
+    <footer>
+            <p>&copy; 2025 Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>
