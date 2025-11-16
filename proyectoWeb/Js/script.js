@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const botonEnviar = document.getElementById('enviarReseña');
-
-    // 1. Cargar las reseñas guardadas al inicio
+    
     cargarReseñasGuardadas(); 
 
     if (botonEnviar) {
@@ -14,13 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
  */
 function cargarReseñasGuardadas() {
     const contenedorComentarios = document.getElementById('form-comentarios');
-    // Limpiamos el contenedor por si acaso
 contenedorComentarios.innerHTML = '';
 
-    // Obtener las reseñas del LocalStorage o un array vacío si no hay nada
     const reseñas = JSON.parse(localStorage.getItem('reseñasUsuarios')) || [];
 
-    // Recorrer el array y crear una card para cada una
     reseñas.forEach(reseña => {
         const nuevaReseñaCard = crearCardReseña(reseña.nombre, reseña.calificacion, reseña.texto, reseña.fecha);
         contenedorComentarios.appendChild(nuevaReseñaCard);
@@ -28,11 +24,8 @@ contenedorComentarios.innerHTML = '';
 }
 
 
-/**
- * Función principal para manejar el envío de la reseña.
- */
+
 function enviarReseña() {
-    // 1. Obtener datos
     const calificacionInput = document.querySelector('input[name="rating"]:checked');
     const textoReseña = document.querySelector('#textoReseña').value.trim();
     const nombreInput = document.getElementById('nombreUsuario') ? document.getElementById('nombreUsuario').value.trim() : "";
@@ -48,7 +41,6 @@ function enviarReseña() {
         year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' 
     });
 
-    // 2. Crear el objeto de la nueva reseña
     const nuevaReseña = {
         nombre: nombreUsuario,
         calificacion: calificacion,
@@ -56,17 +48,15 @@ function enviarReseña() {
         fecha: fechaActual
     };
 
-    // 3. Guardar en LocalStorage
     guardarReseña(nuevaReseña);
 
-    // 4. Actualizar la interfaz (DOM)
+    // Actualizar (DOM)
     const nuevaReseñaCard = crearCardReseña(nombreUsuario, calificacion, textoReseña, fechaActual);
     const contenedorComentarios = document.getElementById('form-comentarios');
     
     // Usamos prepend() para que la nueva reseña aparezca al principio
     contenedorComentarios.prepend(nuevaReseñaCard); 
 
-    // 5. Mostrar mensaje de éxito y limpiar campos
     alert(`¡Reseña enviada correctamente! Calificación: ${calificacion} estrellas.`);
     document.querySelector('#textoReseña').value = '';
     calificacionInput.checked = false;
@@ -77,13 +67,10 @@ function enviarReseña() {
 
 
 function guardarReseña(reseña) {
-    // Obtener las reseñas existentes
     const reseñas = JSON.parse(localStorage.getItem('reseñasUsuarios')) || [];
     
-    // Agregar la nueva reseña al principio del array (para que se muestre primero)
     reseñas.unshift(reseña); 
     
-    // Guardar el array actualizado de vuelta en LocalStorage
     localStorage.setItem('reseñasUsuarios', JSON.stringify(reseñas));
 }
 
@@ -113,6 +100,8 @@ function crearCardReseña(nombre, calificacion, texto, fecha) {
 
     return card;
 }
+// Para eliminar el ultimo comentario.
+
 /*const ultimoComentario = document.querySelector(':last-child');
 if (ultimoComentario){
     ultimoComentario.remove();
