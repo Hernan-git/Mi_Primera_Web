@@ -66,15 +66,16 @@
 
         <div>
             <p>Estas son mis Reseñas:</p>
-            <div class="opiniones">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>Ad repellat labore nisi ullam adipisci iure distinctio molestias. Id sit voluptatem perferendis eius, exercitationem voluptate cupiditate? At eum asperiores impedit consequu
+            <div class="opiniones" id="form-comentarios">
+            
             </div>
 
         </div><br>
 
 
         <div class="contenedor-reseña">
-            <h2>Dejame tu reseña:</h2>
+            <h2>Dejame tu reseña:</h2><br>
+            <input type="text" id="nombreUsuario" name="nombre" value="" placeholder="Nombre y Apellido">
             <div class="estrellas">
                 <input type="radio" id="star5" name="rating" value="5" >
                 <label for="star5" title="5 estrellas">★</label>
@@ -91,7 +92,7 @@
                 <input type="radio" id="star1" name="rating" value="1" >
                 <label for="star1" title="1 estrella">★</label>
             </div>
-            <textarea placeholder="Escribe tu reseña aquí... "></textarea>
+            <textarea id="textoReseña" placeholder="Escribe tu reseña aquí... "></textarea>
             <button id="enviarReseña">Enviar Reseña</button>
           
         </div>

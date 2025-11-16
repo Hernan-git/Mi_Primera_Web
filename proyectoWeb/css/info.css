@@ -100,7 +100,7 @@ video:hover {
     border: 1px solid #ccc;
     border-radius: 8px;
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 20px auto; 
 }
 
@@ -132,7 +132,50 @@ video:hover {
 .estrellas label:hover ~ label {
     color: #ffdb58; 
 }
+/* Estilos para la card de reseña */
+.reseña-card {
+    width: 30%;
+    border: 1px solid #9f9d9d;
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+.reseña-header {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 5px;
+}
+
+.reseña-usuario {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #333;
+}
+
+.rating-visual {
+    color: #ffc700; 
+    font-size: 1em;
+}
+
+.reseña-texto {
+    margin-top: 0;
+    line-height: 1.4;
+}
+
+.reseña-fecha {
+    display: block;
+    text-align: right;
+    font-size: 0.8em;
+    color: #777;
+    margin-top: 10px;
+}
 
 textarea {
     width: 90vw;
@@ -142,6 +185,7 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: none; 
+    
 }
 
 button {
