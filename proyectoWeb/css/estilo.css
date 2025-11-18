@@ -20,8 +20,13 @@
 
     header {
         background-color: #f0dfe8;
-        padding: 20px;
+        padding: 30px;
         text-align: center;
+    }
+    
+    nav ul li {
+        list-style-type: none;
+        display: inline-block;
     }
 
     header nav {
@@ -56,8 +61,6 @@
         position: absolute;
         top: 0;
         left: 0;
-        
-
     }
 
     .main-content {
@@ -115,6 +118,8 @@
     }
 
     .service-box p {
+        overflow-wrap: break-word;
+       flex-wrap: nowrap;
         color: #7d7d7d;
     }
 
@@ -172,4 +177,20 @@
         padding: 15px;
         background-color: #6f4f9f;
         color: white;
+    }
+      @media (max-width: 760px) {
+        .service-box {
+            width: auto;
+            
+        }
+        nav, a {
+        display:inline-block;
+        position:relative;
+        text-decoration: none;
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 0 10px;
+    }
+    
     }

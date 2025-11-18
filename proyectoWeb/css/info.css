@@ -43,6 +43,7 @@ header img {
     height: 7vh;
     padding: 8px;
     border-radius: 50%;
+    position: fixed;
 }
 
 .logo {
@@ -79,21 +80,7 @@ video:hover {
     transform: scale(1.2);
 }
 
-/* .container {
-    display: grid;
-    grid-template-columns: repeat(4,300px );
-    grid-template-rows: repeat(3,300px );
-    gap: 20px 10px;
-}
 
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: scale-down;
-}
-
- */
 .contenedor-reseña {
     width: 100vw;
     padding: 20px;
