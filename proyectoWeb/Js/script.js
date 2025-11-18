@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const botonEnviar = document.getElementById('enviarReseña');
-    
+
     cargarReseñasGuardadas(); 
 
     if (botonEnviar) {
@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-/**
- * Función para cargar y mostrar todas las reseñas guardadas en LocalStorage.
- */
+
+ // Función para cargar y mostrar todas las reseñas guardadas en LocalStorage.
+ 
 function cargarReseñasGuardadas() {
     const contenedorComentarios = document.getElementById('form-comentarios');
 contenedorComentarios.innerHTML = '';
