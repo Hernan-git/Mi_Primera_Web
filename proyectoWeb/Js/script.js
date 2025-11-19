@@ -12,10 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
  // Función para cargar y mostrar todas las reseñas guardadas en LocalStorage.
  
 function cargarReseñasGuardadas() {
+      const reseñas = JSON.parse(localStorage.getItem('reseñasUsuarios')) || [];
     const contenedorComentarios = document.getElementById('form-comentarios');
-contenedorComentarios.innerHTML = '';
-
-    const reseñas = JSON.parse(localStorage.getItem('reseñasUsuarios')) || [];
+contenedorComentarios.innerHTML = "";
 
     reseñas.forEach(reseña => {
         const nuevaReseñaCard = crearCardReseña(reseña.nombre, reseña.calificacion, reseña.texto, reseña.fecha);
@@ -104,6 +103,6 @@ function crearCardReseña(nombre, calificacion, texto, fecha) {
 
 /*const ultimoComentario = document.querySelector(':last-child');
 if (ultimoComentario){
-    ultimoComentario.remove();
+    ultimoComentario.removeItem();
 
 }*/
