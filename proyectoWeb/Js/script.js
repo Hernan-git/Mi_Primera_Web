@@ -14,11 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function cargarReseñasGuardadas() {
       const reseñas = JSON.parse(localStorage.getItem('reseñasUsuarios')) || [];
     const contenedorComentarios = document.getElementById('form-comentarios');
-<<<<<<< HEAD
 contenedorComentarios.innerHTML = "";
-=======
-contenedorComentarios.innerHTML = '';
->>>>>>> d8e7b301d3894e73990a97de115b33a61f244217
 
     reseñas.forEach(reseña => {
         const nuevaReseñaCard = crearCardReseña(reseña.nombre, reseña.calificacion, reseña.texto, reseña.fecha);
