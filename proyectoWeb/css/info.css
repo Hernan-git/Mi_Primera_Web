@@ -121,20 +121,20 @@ video:hover {
 }
 /* Estilos para la card de reseña */
 .reseña-card {
-    width: 30%;
+    width: 40%;
     border: 1px solid #9f9d9d;
     border-radius: 8px;
     padding: 15px;
     margin: 10px;
     background-color: #f9f9f9;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .reseña-header {
     display: flex;
     justify-content:space-between;
     align-items: center;
-    
     margin-bottom: 10px;
     border-bottom: 1px dashed #ddd;
     padding-bottom: 5px;
@@ -154,6 +154,8 @@ video:hover {
 .reseña-texto {
     margin-top: 0;
     line-height: 1.4;
+    overflow-wrap: break-word;
+    flex-wrap: nowrap;
 }
 
 .reseña-fecha {
