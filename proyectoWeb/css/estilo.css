@@ -26,12 +26,25 @@
     
     nav ul li {
         list-style-type: none;
-        display: inline-block;
+       display: inline-block;
     }
 
     header nav {
         display: flex;
         justify-content: center;
+    }
+    #menu {
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar-nav {
+        display: flex;
+        justify-content: center; 
+         list-style-type: none;
+
+    }
+    .nav-link:hover {
+         color: #007bff;
     }
 
     header nav a {
