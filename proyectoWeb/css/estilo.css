@@ -46,6 +46,12 @@
     .nav-link:hover {
          color: #007bff;
     }
+    .nav-link {
+        font-family: 'Arial', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
 
     header nav a {
         text-decoration: none;
@@ -72,8 +78,8 @@
     .logo {
         display: inline-block;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 20px;
+        left: 10px;
     }
 
     .main-content {
