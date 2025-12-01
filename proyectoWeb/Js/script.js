@@ -108,42 +108,7 @@ if (ultimoComentario){
 
 }*/
 
-// Para poner enviado con exito el formulario
 
-/*document.addEventListener('DomContentLoaded', () => {
-    const formulario = document.querySelector("#miFormulario");
-    const inputNombre = document.querySelector("#inputNombre");
-
-formulario.addEventListener("submit" async (e)=>{
-    e.preventDefault();
-    if (!formulario.checkValidity()){
-        return;
-    }
-    const nombre = inputNombre.value.trim();
-    const mensajeAlerta = `Gracias ${nombre}, en breve me estare comunicando contigo.`;
-    const confirmado = window.confirm(mensajeAlerta);
-    if (confirmado){
-        const formData = new formData(formulario);
-        try {
-            const respuesta = await fetch(formulario.action, {
-                    method: formulario.method,
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-        }
-    }
-}
-    }
-});
-    if (respuesta.ok){
-        formulario.reset();
-        alert('Mensaje enviado con Exito!');
-    }
-    else {
-        alert('Error al enviar el Formulario. Intentalo de Nuevo!');
-    }
-
-});*/
 
 
 
